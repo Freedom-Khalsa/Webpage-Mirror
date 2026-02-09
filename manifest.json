@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Webpage Mirror",
+  "version": "2.0.0",
+  "description": "Stream webpages to a mirror window with high quality",
+  
+  "permissions": [
+    "tabs",
+    "windows",
+    "scripting",
+    "storage",
+    "offscreen"
+  ],
+  
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Webpage Mirror"
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["offscreen.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

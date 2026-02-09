@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Offscreen Document</title>
+  <style>
+    body {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+    canvas {
+      display: none;
+    }
+    video {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="offscreenCanvas"></canvas>
+  <video id="offscreenVideo" style="display:none;"></video>
+  <script src="offscreen.js"></script>
+</body>
+</html>
