@@ -112,7 +112,7 @@ User sees high-quality stream
 - ✅ Chrome 72+
 - ✅ Edge 79+
 - ✅ Opera 60+
-- ⚠️ Firefox (tab capture only)
+- ❌ Firefox (Not Supported)
 - ❌ Safari (not supported)
 
 ## Limitations
